@@ -1,0 +1,813 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Lawfirm Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+	<!-- Flaticons  -->
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+
+	<style>
+	
+
+.ultra-services{
+padding:100px 10%;
+font-family:Arial, Helvetica, sans-serif;
+background:linear-gradient(135deg,#f6f7fb,#eef1f6);
+}
+
+.ultra-title{
+text-align:center;
+font-size:36px;
+margin-bottom:50px;
+color:#222;
+}
+
+
+/* BUTTONS */
+
+.ultra-tabs{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+margin-bottom:55px;
+}
+
+.ultra-btn{
+padding:12px 26px;
+border-radius:30px;
+border:none;
+font-weight:600;
+cursor:pointer;
+background:white;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+transition:all .35s ease;
+}
+
+.ultra-btn:hover{
+transform:translateY(-2px);
+}
+
+.active-btn{
+background:linear-gradient(135deg,#d4af37,#f5d76e);
+color:#111;
+box-shadow:0 6px 18px rgba(212,175,55,0.4);
+}
+
+
+/* GRID */
+
+.ultra-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+gap:28px;
+}
+
+
+/* CARD */
+
+.ultra-card{
+background:white;
+padding:30px;
+border-radius:16px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:all .4s ease;
+position:relative;
+overflow:hidden;
+}
+
+.ultra-card::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:4px;
+background:linear-gradient(90deg,#d4af37,#f5d76e);
+opacity:0;
+transition:.3s;
+}
+
+.ultra-card:hover::before{
+opacity:1;
+}
+
+.ultra-card:hover{
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 20px 40px rgba(0,0,0,0.12);
+}
+
+
+/* ICON */
+
+.icon-box{
+width:45px;
+height:45px;
+border-radius:10px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(135deg,#d4af37,#f5d76e);
+color:white;
+font-size:20px;
+margin-bottom:18px;
+}
+
+
+/* TEXT */
+
+.ultra-card h3{
+margin-bottom:10px;
+font-size:20px;
+}
+
+.ultra-card p{
+color:#666;
+margin-bottom:18px;
+line-height:1.5;
+}
+
+.ultra-card a{
+text-decoration:none;
+color:#d4af37;
+font-weight:600;
+}
+
+
+/* ANIMATION */
+
+.hidden-card{
+opacity:0;
+transform:scale(.9);
+pointer-events:none;
+display:none;
+}
+	</style>
+
+	<script>
+	
+	</script>
+	</head>
+	<body>
+		
+	<div class="colorlib-loader"></div>
+	
+	<div id="page">
+	<nav class="colorlib-nav" role="navigation">
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+						<div id="colorlib-logo">
+							<a href="index.html"><img src="./images/image-removebg-preview.png" height="70px" alt=""></span></a></div>
+							 <!-- <img src="./images/image-removebg-preview.png" alt=""> -->
+					</div>
+					<div class="col-md-10 text-right menu-1">
+						<ul>
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="practice.html">Practice Areas</a></li>
+							<!-- <li><a href="won.html">Won Cases</a></li> -->
+							<!-- <li class="has-dropdown">
+								<a href="blog.html">Blog</a>
+								<ul class="dropdown">
+									<li><a href="#">menu 1</a></li>
+									<li><a href="#">menu 2</a></li>
+									<li><a href="#">menu 3</a></li>
+									<li><a href="#">menu 4</a></li>
+								</ul>
+							</li> -->
+							<li><a href="about.html">About</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li class="btn-cta"><a href="#"><span>Make an Appointment</span></a></li>
+							<!-- <li class="btn-cta"><a href="#"><span>Sign Up</span></a></li> -->
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</nav>
+
+	<aside id="colorlib-hero" class="js-fullheight">
+		<div class="flexslider js-fullheight">
+			<ul class="slides">
+		   	<li style="background-image: url(images/img_bg_1.jpg);">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+		   				<div class="slider-text-inner desc">
+		   					<h2 class="heading-section">Practicing Area</h2>
+		   					<p class="colorlib-lead">Designed with love by the fine folks at <a href="#" target="_blank">Lawfirm</a></p>
+		   				</div>
+		   			</div>
+		   		</div>
+		   	</li>
+		  	</ul>
+	  	</div>
+	</aside>
+
+	<section class="ultra-services">
+
+<h2 class="ultra-title">Our Professional Services</h2>
+
+<div class="ultra-tabs">
+
+<button class="ultra-btn active-btn" data-filter="gst">GST Services</button>
+<button class="ultra-btn" data-filter="tax">Income Tax</button>
+<button class="ultra-btn" data-filter="business">Business Reg.</button>
+<button class="ultra-btn" data-filter="property">Property Doc.& & Labour Compliance</button>
+<button class="ultra-btn" data-filter="import"> Import Export & Govt. Doc.</button>
+<button class="ultra-btn" data-filter="legal"> Legal Documentation & Court Support</button>
+<button class="ultra-btn" data-filter="Registry">  Property & Registry Services</button>
+<button class="ultra-btn" data-filter="Public">  Public Authority & Certificate Services (DM / SDM)</button>
+
+</div>
+
+
+<div class="ultra-grid">
+
+<div class="ultra-card" data-category="gst">
+<div class="icon-box">⚡</div>
+<h3>GST Registration</h3>
+<p>Reliable GST registration support handled by experts.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="gst">
+<div class="icon-box">⚡</div>
+<h3>GST Return Filing</h3>
+<p>Professional GST return filing services.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+<div class="ultra-card" data-category="gst">
+<div class="icon-box">⚡</div>
+<h3>GST Notice Reply</h3>
+<p>Professional drafting and submission of replies to GST notices and departmental queries.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="gst">
+<div class="icon-box">⚡</div>
+<h3>GST Refund Processing</h3>
+<p>Complete assistance in filing and tracking GST refund applications for eligible taxpayers.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="gst">
+<div class="icon-box">⚡</div>
+<h3>GST Audit Assistance</h3>
+<p>Expert support during GST departmental audits with proper documentation and compliance.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="gst">
+<div class="icon-box">⚡</div>
+<h3>DRC-01, DRC-03 & departmental compliance handling</h3>
+<p>Preparation and filing of GST forms DRC-01, DRC-03 and other compliance responses.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="gst">
+<div class="icon-box">⚡</div>
+<h3>GST LUT Filing (Export without tax)</h3>
+<p>Filing Letter of Undertaking (LUT) for exporters to supply goods or services without GST.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="gst">
+<div class="icon-box">⚡</div>
+<h3>E-Way Bill Management</h3>
+<p>Generation and management of E-Way Bills for smooth transportation compliance.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="gst">
+<div class="icon-box">⚡</div>
+<h3>GSTR-2A / 2B Reconciliation</h3>
+<p>Detailed reconciliation of purchase data to ensure correct input tax credit claims.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="gst">
+<div class="icon-box">⚡</div>
+<h3>Annual Return (GSTR-9) & Reconciliation (9C)</h3>
+<p>Preparation and filing of annual GST returns with reconciliation statements.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="gst">
+<div class="icon-box">⚡</div>
+<h3>GST Registration Revocation</h3>
+<p>Assistance in restoring cancelled GST registrations through proper applications.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="gst">
+<div class="icon-box">⚡</div>
+<h3>GST Appeal Filing (First Appeal u/s 107)</h3>
+<p>Professional filing of first appeals against GST orders before appellate authorities.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="gst">
+<div class="icon-box">⚡</div>
+<h3>GST Refund of ITC (Export / Inverted Duty/TCS/TDS & Others)</h3>
+<p>End-to-end support for claiming eligible ITC refunds under various GST provisions.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="gst">
+<div class="icon-box">⚡</div>
+<h3>GST Compliance Health Check / Review</h3>
+<p>Comprehensive review of GST records to identify risks and ensure compliance.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="gst">
+<div class="icon-box">⚡</div>
+<h3>Vendor Compliance Verification</h3>
+<p>Verification of vendor GST compliance to safeguard your input tax credit eligibility.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+
+<div class="ultra-card" data-category="tax">
+<div class="icon-box">📄</div>
+<h3>ITR Filing</h3>
+<p>Fast and secure income tax return filing.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="tax">
+<div class="icon-box">📊</div>
+<h3>Tax Planning</h3>
+<p>Smart tax planning strategies.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="tax">
+<div class="icon-box">📊</div>
+<h3>Income Tax Notice Reply</h3>
+<p>Professional drafting and submission of replies to income tax notices and departmental queries.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="tax">
+<div class="icon-box">📊</div>
+<h3>TDS Return Filing & Compliance</h3>
+<p>Accurate filing of quarterly TDS returns and complete TDS compliance management.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="tax">
+<div class="icon-box">📊</div>
+<h3>ESIC & EPFO Compliances</h3>
+<p>Support for ESIC and EPFO registrations, filings, and ongoing compliance requirements.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="tax">
+<div class="icon-box">📊</div>
+<h3>Business Income Computation</h3>
+<p>Professional computation of business income for accurate tax reporting and filing.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="tax">
+<div class="icon-box">📊</div>
+<h3>PAN Application / Correction / Update</h3>
+<p>Assistance with new PAN applications, corrections, and updates in PAN records.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="tax">
+<div class="icon-box">📊</div>
+<h3>Tax Audit (u/s 44AB coordination)</h3>
+<p>Coordination and preparation of documents required for tax audits under section 44AB.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="tax">
+<div class="icon-box">📊</div>
+<h3>15CA / 15CB Certification Assistance</h3>
+<p>Support for foreign remittance documentation including Form 15CA and CA certification.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="tax">
+<div class="icon-box">📊</div>
+<h3>Capital Gain Computation</h3>
+<p>Accurate calculation of capital gains tax on property, shares, and other investments.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="tax">
+<div class="icon-box">📊</div>
+<h3>Form 26AS & AIS Reconciliation</h3>
+<p>Detailed reconciliation of Form 26AS and AIS to ensure correct income reporting.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="tax">
+<div class="icon-box">📊</div>
+<h3>Income Tax Appeal Filing (CIT(A))</h3>
+<p>Preparation and filing of appeals before Commissioner of Income Tax (Appeals).</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="tax">
+<div class="icon-box">📊</div>
+<h3>Lower TDS Certificate Application</h3>
+<p>Application and documentation support for obtaining lower or nil TDS certificates.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="tax">
+<div class="icon-box">📊</div>
+<h3>Advance Tax Planning</h3>
+<p>Strategic planning of advance tax payments to reduce interest and penalties.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="tax">
+<div class="icon-box">📊</div>
+<h3>NRI Taxation Assistance</h3>
+<p>Expert guidance on Indian tax obligations, filing, and compliance for NRIs.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+<div class="ultra-card" data-category="tax">
+<div class="icon-box">📊</div>
+<h3>Form 10B / 10BB (Trust Compliance Support)</h3>
+<p>Support for audit reports and compliance filings for trusts and charitable institutions.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+
+<div class="ultra-card" data-category="business">
+<div class="icon-box">🏢</div>
+<h3>Company Registration</h3>
+<p>Complete company registration support.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+
+<div class="ultra-card" data-category="property">
+<div class="icon-box">🏠</div>
+<h3>Property Agreement</h3>
+<p>Professional property documentation services.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+
+<div class="ultra-card" data-category="govt">
+<div class="icon-box">🪪</div>
+<h3>PAN Card Service</h3>
+<p>Quick PAN card assistance.</p>
+<a href="#">ENQUIRE NOW →</a>
+</div>
+
+</div>
+
+</section>
+	
+	<!-- <div id="colorlib-practice">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="flaticon-courthouse"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Real Estate Law</a></h3>
+							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="flaticon-padlock"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Insurance Law</a></h3>
+							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="flaticon-folder"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Business Law</a></h3>
+							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="flaticon-handcuffs"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Personal Injury</a></h3>
+							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="flaticon-handcuffs"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Medical Neglegence</a></h3>
+							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="flaticon-libra"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Criminal Defense</a></h3>
+							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="flaticon-lawyer"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Sexual Offenses</a></h3>
+							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="flaticon-policeman"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Labor Employment Law</a></h3>
+							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="flaticon-libra"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Criminal Defense</a></h3>
+							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+	<div id="colorlib-testimonial" class="colorlib-bg-section">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-6 col-md-offset-3 text-center colorlib-heading">
+					<h2>What are the clients says</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="row animate-box">
+						<div class="owl-carousel owl-carousel-fullwidth">
+							<div class="item">
+								<div class="testimony-slide active text-center">
+									<figure>
+										<img src="images/user-1.jpg" alt="user">
+									</figure>
+									<span>Jean Doe, via <a href="#" class="twitter">Twitter</a></span>
+									<blockquote>
+										<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+									</blockquote>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimony-slide active text-center">
+									<figure>
+										<img src="images/user-1.jpg" alt="user">
+									</figure>
+									<span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
+									<blockquote>
+										<p>&ldquo;Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+									</blockquote>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimony-slide active text-center">
+									<figure>
+										<img src="images/user-1.jpg" alt="user">
+									</figure>
+									<span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
+									<blockquote>
+										<p>&ldquo;Far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+									</blockquote>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="colorlib-consult">
+		<div class="video colorlib-video" style="background-image: url(images/video.jpg);" data-stellar-background-ratio="0.5">
+		</div>
+		<div class="choose choose-form animate-box">
+			<div class="colorlib-heading">
+				<h2>Free Legal Consultation</h2>
+			</div>
+			<form action="#">
+				<div class="row form-group">
+					<div class="col-md-6">
+						<!-- <label for="fname">First Name</label> -->
+						<input type="text" id="fname" class="form-control" placeholder="Your firstname">
+					</div>
+					<div class="col-md-6">
+						<!-- <label for="lname">Last Name</label> -->
+						<input type="text" id="lname" class="form-control" placeholder="Your lastname">
+					</div>
+				</div>
+
+				<div class="row form-group">
+					<div class="col-md-12">
+						<!-- <label for="email">Email</label> -->
+						<input type="text" id="email" class="form-control" placeholder="Your email address">
+					</div>
+				</div>
+
+				<div class="row form-group">
+					<div class="col-md-12">
+						<!-- <label for="subject">Subject</label> -->
+						<input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
+					</div>
+				</div>
+
+				<div class="row form-group">
+					<div class="col-md-12">
+						<!-- <label for="message">Message</label> -->
+						<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
+					</div>
+				</div>
+				<div class="form-group">
+					<input type="submit" value="Send Message" class="btn btn-primary">
+				</div>
+
+			</form>	
+		</div>
+	</div>
+
+
+	
+	<footer id="colorlib-footer" role="contentinfo">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-3 colorlib-widget">
+					<h4>TaxNex LLP</h4>
+					<p>TAXNEX LLP is a professionally managed advisory firm providing comprehensive Legal, Tax, Property and Documentation Support Services under one roof. </p>
+				</div>
+				<div class="col-md-3 col-md-push-1">
+					<h4>Navigation</h4>
+					<ul class="colorlib-footer-links">
+						<li><a href="./index.html">Home</a></li>
+						<li><a href="./practice.html">Practice Areas</a></li>
+						<!-- <li><a href="#">Won Cases</a></li> -->
+						<!-- <li><a href="#">Blog</a></li> -->
+						<li><a href="./about.html">About us</a></li>
+						<li><a href="./contact.html">Contact us</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-3 col-md-push-1">
+					<h4>Contact Information</h4>
+					<ul class="colorlib-footer-links">
+						<li>Registered Office: 16, G/F, SHOP. NO. 06, JASWANT APARTMENT, OKHLA VILLAGE, JAMIA NAGAR, NEW DELHI, SOUTH DELHI-110025 <br></li>
+						<li><a href="tel://1234567920"> 9811167059, 89208 68922</a></li>
+						<li><a href="mailto:info@yoursite.com">infotaxnexllp@gmail.com</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-3 col-md-push-1">
+					<h4>Opening Hours</h4>
+					<ul class="colorlib-footer-links">
+						<li>Mon - Thu: 9:00 - 21 00</li>
+						<li>Fri 8:00 - 21 00</li>
+						<li>Sat 9:30 - 15: 00</li>
+					</ul>
+				</div>
+
+			</div>
+
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+					<small class="block">&copy; 2026 TaxNex LLP. All Rights Reserved. Created by JTS TECHNOLOGIES</small> 
+					<!-- <small class="block">Distributed by: <a href="https://themewagon.com/" target="_blank">ThemeWagon</a></small> -->
+					</p>
+					<p>
+						<ul class="colorlib-social-icons">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-linkedin"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+						</ul>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+
