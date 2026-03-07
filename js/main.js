@@ -143,14 +143,14 @@
 							}
 
 							el.removeClass('item-animate');
-						},  k * 200, 'easeInOutExpo' );
+						},  k * 40, 'easeInOutExpo' );
 					});
 					
-				}, 100);
+				}, 30);
 				
 			}
 
-		} , { offset: '85%' } );
+		} , { offset: '65%' } );
 	};
 
 
