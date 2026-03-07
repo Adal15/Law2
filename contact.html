@@ -21,6 +21,286 @@
 	<meta name="twitter:card" content="" />
 
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+	<style>
+		.contact-hub-section {
+			padding: 100px 0;
+			background: #fafafa;
+		}
+
+		.contact-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 0 20px;
+			display: grid;
+			grid-template-columns: 0.9fr 1.1fr;
+			gap: 80px;
+			align-items: flex-start;
+		}
+
+		/* CONTACT INFO SIDE */
+		.contact-info-side {
+			padding-top: 20px;
+		}
+
+		.contact-badge {
+			display: inline-block;
+			font-size: 13px;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			color: #d4af37;
+			margin-bottom: 20px;
+		}
+
+		.contact-main-title {
+			font-family: "Playfair Display", serif;
+			font-size: 48px;
+			color: #1a1a1a;
+			line-height: 1.2;
+			font-weight: 700;
+			margin-bottom: 30px;
+		}
+
+		.contact-lead {
+			font-size: 17px;
+			line-height: 1.8;
+			color: #666;
+			margin-bottom: 50px;
+		}
+
+		.contact-details-list {
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+		}
+
+		.contact-method {
+			display: flex;
+			gap: 25px;
+			align-items: flex-start;
+		}
+
+		.method-icon {
+			width: 50px;
+			height: 50px;
+			background: rgba(212, 175, 55, 0.1);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #d4af37;
+			font-size: 20px;
+			flex-shrink: 0;
+		}
+
+		.method-text h4 {
+			font-size: 14px;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			color: #999;
+			margin: 0 0 8px 0;
+		}
+
+		.method-text p, .method-text a {
+			font-size: 18px;
+			color: #1a1a1a;
+			font-weight: 600;
+			margin: 0;
+			text-decoration: none;
+			line-height: 1.5;
+		}
+
+		.method-text a:hover {
+			color: #d4af37;
+		}
+
+		/* FORM SIDE */
+		.contact-form-card {
+			background: #ffffff;
+			padding: 50px;
+			box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+			border-radius: 8px;
+			border-top: 5px solid #d4af37;
+		}
+
+		.form-header {
+			margin-bottom: 40px;
+		}
+
+		.form-header h3 {
+			font-family: "Playfair Display", serif;
+			font-size: 28px;
+			font-weight: 700;
+			color: #1a1a1a;
+			margin-bottom: 10px;
+		}
+
+		.form-header p {
+			color: #888;
+			font-size: 15px;
+		}
+
+		.premium-form .form-group {
+			margin-bottom: 25px;
+		}
+
+		.premium-form .form-control {
+			height: 55px;
+			background: #f9f9f9;
+			border: 1px solid #eee;
+			border-radius: 4px;
+			padding: 10px 20px;
+			font-size: 15px;
+			color: #1a1a1a;
+			transition: all 0.3s ease;
+		}
+
+		.premium-form .form-control:focus {
+			background: #fff;
+			border-color: #d4af37;
+			box-shadow: none;
+		}
+
+		.premium-form textarea.form-control {
+			height: auto;
+			padding-top: 15px;
+		}
+
+		.btn-submit-premium {
+			width: 100%;
+			height: 60px;
+			background: #1a1a1a;
+			color: #fff;
+			border: none;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			font-size: 14px;
+			transition: all 0.3s ease;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+		.btn-submit-premium:hover {
+			background: #d4af37;
+			transform: translateY(-2px);
+			box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+		}
+
+		@media (max-width: 992px) {
+			.contact-container {
+				grid-template-columns: 1fr;
+				gap: 60px;
+			}
+			.contact-info-side {
+				text-align: center;
+			}
+			.contact-method {
+				justify-content: center;
+				text-align: left;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.contact-main-title {
+				font-size: 36px;
+			}
+			.contact-form-card {
+				padding: 30px;
+			}
+		}
+	</style>
+	<style>
+		/* =============================
+   CONTACT INFO SECTION (.oc-section)
+============================= */
+/* Section */
+.oc-contact-section {
+  padding: 80px 20px;
+  background: #fdfdfd; /* Light background */
+  font-family: "Poppins", sans-serif;
+}
+
+/* Container */
+.oc-contact-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Grid */
+.oc-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* Card */
+.oc-contact-card {
+  background: #ffffff; /* White card background */
+  border-radius: 12px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: .3s ease;
+  border: 1px solid #e0e0e0; /* Light border */
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.oc-contact-card:hover {
+  transform: translateY(-8px);
+  border-color: #ca9817; /* Gold border on hover */
+  box-shadow: 0 10px 30px rgba(202, 152, 23, 0.15); /* Gold glow */
+}
+
+/* Icon */
+.oc-icon-box {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(202, 152, 23, 0.1); /* Gold tint */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  font-size: 28px;
+  color: #ca9817; /* Gold icon */
+  transition: .3s ease;
+}
+
+.oc-contact-card:hover .oc-icon-box {
+  background: #ca9817;
+  color: #fff;
+}
+
+/* Text */
+.oc-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #888;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.oc-title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #1a1a1a; /* Dark text */
+}
+
+.oc-text {
+  color: #666; /* Darker grey text */
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+	</style>
 	
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
@@ -68,7 +348,8 @@
 					<div class="col-md-10 text-right menu-1">
 						<ul>
 							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="practice.html">Practice Areas</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="practice.html">Our Core Services</a></li>
 							<!-- <li><a href="won.html">Won Cases</a></li> -->
 							<!-- <li class="has-dropdown">
 								<a href="blog.html">Blog</a>
@@ -79,9 +360,8 @@
 									<li><a href="#">menu 4</a></li>
 								</ul>
 							</li> -->
-							<li><a href="about.html">About</a></li>
 							<li><a href="contact.html">Contact</a></li>
-							<li class="btn-cta"><a href="#"><span>Make an Appointment</span></a></li>
+							<li class="btn-cta"><a href="#colorlib-consult"><span>Make an Appointment</span></a></li>
 							<!-- <li class="btn-cta"><a href="#"><span>Sign Up</span></a></li> -->
 						</ul>
 					</div>
@@ -100,7 +380,7 @@
 		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 		   				<div class="slider-text-inner desc">
 		   					<h2 class="heading-section">Contact Us</h2>
-		   					<p class="colorlib-lead">Designed with love by the fine folks at <a href="#" target="_blank">Lawfirm</a></p>
+		   					<!-- <p class="colorlib-lead">Designed with love by the fine folks at <a href="#" target="_blank">Lawfirm</a></p> -->
 		   				</div>
 		   			</div>
 		   		</div>
@@ -108,70 +388,156 @@
 		  	</ul>
 	  	</div>
 	</aside>
-	
-	<div id="colorlib-contact">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-5 col-md-push-1 animate-box">
-					
-					<div class="colorlib-contact-info">
-						<h3>Contact Information</h3>
-						<ul>
-							<li class="address">Registered Office: 16, G/F, SHOP. NO. 06,<br> JASWANT APARTMENT, OKHLA VILLAGE,<br> JAMIA NAGAR, NEW DELHI, <br>SOUTH DELHI-110025</li>
-							<li class="phone"><a href="tel://1234567920">9811167059, 89208 68922</a></li>
-							<li class="email"><a href="mailto:info@yoursite.com">infotaxnexllp@gmail.com</a></li>
-							<li class="url"><a href="#">TaxNex LLP.com</a></li>
-						</ul>
+	<section class="oc-contact-section">
+  <div class="oc-contact-container">
+
+    <div class="oc-contact-grid">
+
+      <!-- Phone -->
+      <div class="oc-contact-card">
+        <div class="oc-icon-box">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+        <div class="oc-label">PHONE</div>
+        <div class="oc-title">
+           +98111 67059  <br>
+        </div>
+        <!-- <div class="oc-text">Mr. director</div> -->
+      </div>
+
+      <!-- Email -->
+      <div class="oc-contact-card">
+        <div class="oc-icon-box">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <div class="oc-label">EMAIL</div>
+        <div class="oc-title">infotaxnexllp@gmail.com</div>
+        <div class="oc-text">We reply within 24 hours</div>
+      </div>
+
+      <!-- Address -->
+      <div class="oc-contact-card">
+        <div class="oc-icon-box">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <div class="oc-label">ADDRESS</div>
+        <div class="oc-title">New Delhi, India</div>
+        <!-- <div class="oc-text">Hayathnagar, Rangareddy, Telangana</div> -->
+      </div>
+
+      <!-- Working Hours -->
+      <div class="oc-contact-card">
+        <div class="oc-icon-box">
+          <i class="fa-solid fa-clock"></i>
+        </div>
+        <div class="oc-label">WORKING HOURS</div>
+        <div class="oc-title">Mon – Sat: 9:00 AM – 6:00 PM</div>
+        <!-- <div class="oc-text">Sunday: By Appointment</div> -->
+      </div>
+
+    </div>
+
+  </div>
+</section>
+	<section class="contact-hub-section">
+		<div class="contact-container">
+			<!-- INFO AREA -->
+			<div class="contact-info-side animate-box">
+				<span class="contact-badge">The Advisory Hub</span>
+				<h2 class="contact-main-title">Get In Touch With Our Experts</h2>
+				<p class="contact-lead">
+					Whether you have questions about GST compliance, property advisory, or business registrations, our dedicated team is here to provide professional guidance and reliable solutions.
+				</p>
+
+				<div class="contact-details-list">
+					<div class="contact-method">
+						<div class="method-icon">
+							<i class="fa-solid fa-location-dot"></i>
+						</div>
+						<div class="method-text">
+							<h4>Registered Office</h4>
+							<p>16, G/F, SHOP. NO. 06, JASWANT APARTMENT,<br> OKHLA VILLAGE, JAMIA NAGAR,<br> NEW DELHI - 110025</p>
+						</div>
 					</div>
 
+					<div class="contact-method">
+						<div class="method-icon">
+							<i class="fa-solid fa-phone"></i>
+						</div>
+						<div class="method-text">
+							<h4>Talk to Us</h4>
+							<p><a href="tel://9811167059">98111 67059</a>, <a href="tel://8920868922">89208 68922</a></p>
+						</div>
+					</div>
+
+					<div class="contact-method">
+						<div class="method-icon">
+							<i class="fa-solid fa-envelope"></i>
+						</div>
+						<div class="method-text">
+							<h4>Email Address</h4>
+							<p><a href="mailto:infotaxnexllp@gmail.com">infotaxnexllp@gmail.com</a></p>
+						</div>
+					</div>
+
+					<div class="contact-method">
+						<div class="method-icon">
+							<i class="fa-solid fa-globe"></i>
+						</div>
+						<div class="method-text">
+							<h4>Official Website</h4>
+							<p><a href="#">TaxNexLLP.com</a></p>
+						</div>
+					</div>
 				</div>
-				<div class="col-md-6 animate-box">
-					<h3>Send A Message</h3>
-					<form action="#">
+			</div>
+
+			<!-- FORM AREA -->
+			<div class="contact-form-side animate-box">
+				<div class="contact-form-card">
+					<div class="form-header">
+						<h3>Send A Message</h3>
+						<p>Fill out the form below and we'll get back to you within 24 hours.</p>
+					</div>
+					<form action="#" class="premium-form">
 						<div class="row form-group">
 							<div class="col-md-6">
-								<!-- <label for="fname">First Name</label> -->
-								<input type="text" id="fname" class="form-control" placeholder="Your firstname">
+								<input type="text" id="fname" class="form-control" placeholder="First Name">
 							</div>
 							<div class="col-md-6">
-								<!-- <label for="lname">Last Name</label> -->
-								<input type="text" id="lname" class="form-control" placeholder="Your lastname">
+								<input type="text" id="lname" class="form-control" placeholder="Last Name">
 							</div>
 						</div>
 
 						<div class="row form-group">
 							<div class="col-md-12">
-								<!-- <label for="email">Email</label> -->
-								<input type="text" id="email" class="form-control" placeholder="Your email address">
+								<input type="text" id="email" class="form-control" placeholder="Email Address">
 							</div>
 						</div>
 
 						<div class="row form-group">
 							<div class="col-md-12">
-								<!-- <label for="subject">Subject</label> -->
-								<input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
+								<input type="text" id="subject" class="form-control" placeholder="Subject of inquiry">
 							</div>
 						</div>
 
 						<div class="row form-group">
 							<div class="col-md-12">
-								<!-- <label for="message">Message</label> -->
-								<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
+								<textarea name="message" id="message" cols="30" rows="6" class="form-control" placeholder="How can we help you?"></textarea>
 							</div>
 						</div>
+						
 						<div class="form-group">
-							<input type="submit" value="Send Message" class="btn btn-primary">
+							<button type="submit" class="btn-submit-premium">Send Inquiry</button>
 						</div>
-
 					</form>		
 				</div>
 			</div>
-			
 		</div>
-	</div>
+	</section>
 	<!-- <div id="map" class="colorlib-map"></div> -->
 
-	<div id="colorlib-consult">
+	<!-- <div id="colorlib-consult">
 		<div class="video colorlib-video" style="background-image: url(images/video.jpg);" data-stellar-background-ratio="0.5">
 		</div>
 		<div class="choose choose-form animate-box">
@@ -181,32 +547,32 @@
 			<form action="#">
 				<div class="row form-group">
 					<div class="col-md-6">
-						<!-- <label for="fname">First Name</label> -->
+						<label for="fname">First Name</label>
 						<input type="text" id="fname" class="form-control" placeholder="Your firstname">
 					</div>
 					<div class="col-md-6">
-						<!-- <label for="lname">Last Name</label> -->
+						<label for="lname">Last Name</label>
 						<input type="text" id="lname" class="form-control" placeholder="Your lastname">
 					</div>
 				</div>
 
 				<div class="row form-group">
 					<div class="col-md-12">
-						<!-- <label for="email">Email</label> -->
+						<label for="email">Email</label>
 						<input type="text" id="email" class="form-control" placeholder="Your email address">
 					</div>
 				</div>
 
 				<div class="row form-group">
 					<div class="col-md-12">
-						<!-- <label for="subject">Subject</label> -->
+						<label for="subject">Subject</label>
 						<input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
 					</div>
 				</div>
 
 				<div class="row form-group">
 					<div class="col-md-12">
-						<!-- <label for="message">Message</label> -->
+						<label for="message">Message</label>
 						<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
 					</div>
 				</div>
@@ -216,7 +582,7 @@
 
 			</form>	
 		</div>
-	</div>
+	</div> -->
 
 
 	
@@ -225,13 +591,14 @@
 			<div class="row row-pb-md">
 				<div class="col-md-3 colorlib-widget">
 					<h4>TaxNex LLP</h4>
-					<p>TAXNEX LLP is a professionally managed advisory firm providing comprehensive Legal, Tax, Property and Documentation Support Services under one roof. </p>
+					<p class="simple" style="color: aliceblue;">GSTIN: 07AAZFT1701C1Z8 <br>
+					LLPIN: ACT-2135</p>
 				</div>
 				<div class="col-md-3 col-md-push-1">
 					<h4>Navigation</h4>
 					<ul class="colorlib-footer-links">
 						<li><a href="./index.html">Home</a></li>
-						<li><a href="./practice.html">Practice Areas</a></li>
+						<li><a href="./practice.html">Our Core Services</a></li>
 						<!-- <li><a href="#">Won Cases</a></li> -->
 						<!-- <li><a href="#">Blog</a></li> -->
 						<li><a href="./about.html">About us</a></li>
@@ -270,7 +637,7 @@
 							<li><a href="#"><i class="icon-twitter"></i></a></li>
 							<li><a href="#"><i class="icon-facebook"></i></a></li>
 							<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+							<!-- <li><a href="#"><i class="icon-dribbble"></i></a></li> -->
 						</ul>
 					</p>
 				</div>

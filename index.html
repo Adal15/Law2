@@ -49,7 +49,193 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+<style>
+	/* =============================
+   FLOATING MENU (Redesign)
+============================= */
 
+.floating-menu-container {
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column; /* Toggle at bottom, items above */
+  align-items: center;
+  gap: 15px;
+}
+
+/* Toggle Button */
+.floating-toggle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  /* background: linear-gradient(135deg, var(--secondary-color), var(--primary-color)); */
+  background: #0b162a;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(202, 152, 23, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.floating-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 35px rgba(202, 152, 23, 0.6);
+}
+
+.floating-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Icon Animation */
+.floating-toggle i {
+  position: absolute;
+  transition: 
+    opacity 0.3s ease, 
+    transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.floating-toggle .close-icon {
+  opacity: 0;
+  transform: rotate(-180deg) scale(0.5);
+}
+
+.floating-toggle .open-icon {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+/* Active State for Toggle */
+.floating-menu-container.active .floating-toggle .close-icon {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+.floating-menu-container.active .floating-toggle .open-icon {
+  opacity: 0;
+  transform: rotate(180deg) scale(0.5);
+}
+
+/* Menu Items Wrapper */
+.floating-menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none; /* Interact only when active */
+}
+
+/* Menu Item Link */
+.floating-menu-container .menu-item {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(8, 15, 30, 0.8); /* Dark glass */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  color: rgb(237, 162, 64);
+  
+  /* Initial Hidden State */
+  opacity: 0;
+  transform: translateY(20px) scale(0.8);
+  transition: 
+    opacity 0.3s ease, 
+    transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.floating-menu-container .menu-item:hover {
+  background: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+
+}
+
+/* Active State for Items (Staggered Reveal) */
+.floating-menu-container.active .floating-menu-items {
+  pointer-events: auto;
+}
+
+.floating-menu-container.active .menu-item {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Stagger Delays (Bottom to Top) */
+.floating-menu-container.active .menu-item:nth-child(4) { transition-delay: 0.05s; }
+.floating-menu-container.active .menu-item:nth-child(3) { transition-delay: 0.1s; }
+.floating-menu-container.active .menu-item:nth-child(2) { transition-delay: 0.15s; }
+.floating-menu-container.active .menu-item:nth-child(1) { transition-delay: 0.2s; }
+
+/* Tooltip (Label) */
+.floating-menu-container .menu-item::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  right: 70px; /* Position to the left of the button */
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(10px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.floating-menu-container .menu-item:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Temporary Contact Label */
+.floating-contact-label {
+  position: absolute;
+  left: 75px; 
+  bottom: 0; /* Align with bottom of button */
+  top: auto;
+  height: 50px; /* Match button height */
+  display: flex;
+  align-items: center;
+  
+  background: rgba(255, 255, 255, 0.9);
+  color: #111;
+  padding: 0 15px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  pointer-events: none;
+  
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+  width: max-content;
+}
+
+.floating-menu-container.active .floating-contact-label {
+  opacity: 0;
+  transform: translateX(10px);
+}
+</style>
 	</head>
 	<body>
 		
@@ -68,7 +254,8 @@
 					<div class="col-md-10 text-right menu-1">
 						<ul>
 							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="practice.html">Practice Areas</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="practice.html">Our Core Services</a></li>
 							<!-- <li><a href="won.html">Won Cases</a></li> -->
 							<!-- <li class="has-dropdown">
 								<a href="blog.html">Blog</a>
@@ -79,9 +266,8 @@
 									<li><a href="#">menu 4</a></li>
 								</ul>
 							</li> -->
-							<li><a href="about.html">About</a></li>
 							<li><a href="contact.html">Contact</a></li>
-							<li class="btn-cta"><a href="#"><span>Make an Appointment</span></a></li>
+							<li class="btn-cta"><a href="#colorlib-consult"><span>Make an Appointment</span></a></li>
 							<!-- <li class="btn-cta"><a href="#"><span>Sign Up</span></a></li> -->
 						</ul>
 					</div>
@@ -115,7 +301,7 @@
 			   			<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
 			   				<div class="slider-text-inner">
 			   					<h1>Your ultimate law &amp; legal Solution</h1>
-									<h2>Visit our sites here! <a href="#" target="_blank">TaxNex LLp.com</a></h2>
+									<h2>Your Legal Solution starts here!</h2>
 									<p><a class="btn btn-primary btn-lg btn-learn" href="#">Make An Appointment</a></p>
 			   				</div>
 			   			</div>
@@ -129,7 +315,7 @@
 			   			<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
 			   				<div class="slider-text-inner">
 			   					<h1>Defend Your Constitutional Right with Legal Help</h1>
-									<h2>Visit our sites here! <a href="#" target="_blank">TaxNex LLp.com</a></h2>
+									<h2>Your Legal Solution starts here!</h2>
 									<p><a class="btn btn-primary btn-lg btn-learn" href="#">Make An Appointment</a></p>
 			   				</div>
 			   			</div>
@@ -164,7 +350,7 @@
 		</div>
 		<div class="third-col third-col-color">
 			<span class="icon"><i class="icon-old-phone"></i></span>
-			<h2>Call now (+91) 98111 67059  </h2>
+			<h2 class="simple">Call now (+91) 98111 67059  </h2>
 			<h2>Email us @ <a href="#">infotaxnexllp@gmail.com</a></h2>
 			<p>Contact our legal team today for a confidential consultation. We are ready to answer your questions, review your case, and provide professional legal advice tailored to your situation.</p>
 		</div>
@@ -208,7 +394,7 @@
 		<div class="choose animate-box">
 			<div class="colorlib-heading">
 				<h2>7 Years of experienced serving a high quality services</h2>
-				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+				<p>TAXNEX LLP is a professionally managed advisory firm providing comprehensive Legal, Tax, Property and Documentation Support Services under one roof.</p>
 			</div>
 			<div class="progress">
 				<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
@@ -238,7 +424,7 @@
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center colorlib-heading">
 					<h2>Practice Area</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+					<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p> -->
 				</div>
 			</div>
 			<div class="row">
@@ -408,7 +594,7 @@
 		</div>
 		<div class="choose choose-form animate-box">
 			<div class="colorlib-heading">
-				<h2>Free Legal Consultation</h2>
+				<h2> Legal Consultation</h2>
 			</div>
 			<form action="#">
 				<div class="row form-group">
@@ -567,13 +753,14 @@
 			<div class="row row-pb-md">
 				<div class="col-md-3 colorlib-widget">
 					<h4>TaxNex LLP</h4>
-					<p>TAXNEX LLP is a professionally managed advisory firm providing comprehensive Legal, Tax, Property and Documentation Support Services under one roof. </p>
+					<p class="simple" style="color: aliceblue;">GSTIN: 07AAZFT1701C1Z8 <br>
+					LLPIN: ACT-2135</p>
 				</div>
 				<div class="col-md-3 col-md-push-1">
 					<h4>Navigation</h4>
 					<ul class="colorlib-footer-links">
 						<li><a href="./index.html">Home</a></li>
-						<li><a href="./practice.html">Practice Areas</a></li>
+						<li><a href="./practice.html">Our Core Services</a></li>
 						<!-- <li><a href="#">Won Cases</a></li> -->
 						<!-- <li><a href="#">Blog</a></li> -->
 						<li><a href="./about.html">About us</a></li>
@@ -612,7 +799,7 @@
 							<li><a href="#"><i class="icon-twitter"></i></a></li>
 							<li><a href="#"><i class="icon-facebook"></i></a></li>
 							<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+							<!-- <li><a href="#"><i class="icon-dribbble"></i></a></li> -->
 						</ul>
 					</p>
 				</div>
@@ -626,6 +813,30 @@
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
 	
+
+	<div class="floating-menu-container">
+      <div class="floating-menu-items">
+        <a href="mailto:infotaxnexllp@gmail.com" class="menu-item" data-tooltip="Email Us">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://maps.app.goo.gl/YourMapLinkHere" target="_blank" class="menu-item" data-tooltip="Locate Us">
+          <i class="fa-solid fa-location-dot"></i>
+        </a>
+        <a href="https://wa.me/919811167059" target="_blank" class="menu-item" data-tooltip="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="tel:+919811167059" class="menu-item" data-tooltip="Call Us">
+          <i class="fa-solid fa-phone"></i>
+        </a>
+      </div>
+      <button class="floating-toggle" id="menuToggle" aria-label="Toggle Menu">
+        <i class="fa-solid fa-plus open-icon"></i>
+        <i class="fa-solid fa-xmark close-icon"></i>
+      </button>
+      <span class="floating-contact-label">Contact Us</span>
+    </div>
+
+
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->

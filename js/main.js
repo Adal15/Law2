@@ -379,3 +379,29 @@ card.style.display="none";
 });
 
 });
+
+// Floating Menu Toggle
+const floatingContainer = document.querySelector(".floating-menu-container");
+const floatingToggle = document.getElementById("menuToggle");
+const contactLabel = document.querySelector(".floating-contact-label");
+
+if (floatingToggle && floatingContainer) {
+  floatingToggle.addEventListener("click", () => {
+    floatingContainer.classList.toggle("active");
+
+    // Remove label permanently on first click
+    if (contactLabel) {
+      contactLabel.style.opacity = '0';
+      setTimeout(() => {
+        contactLabel.remove();
+      }, 300); // 300ms matches existing CSS transition
+    }
+  });
+
+  // Close when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!floatingContainer.contains(e.target) && floatingContainer.classList.contains("active")) {
+      floatingContainer.classList.remove("active");
+    }
+  });
+}
