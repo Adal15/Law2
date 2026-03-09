@@ -259,7 +259,7 @@ h1, h2, h3, h4, h5, h6, figure {
     transform: scale(1.1); }
 
 #colorlib-hero {
-  min-height: 700px;
+  min-height: 500px;
   background: #fff url(../images/loader.gif) no-repeat center center; }
   #colorlib-hero .btn {
     font-size: 24px; }
@@ -276,7 +276,7 @@ h1, h2, h3, h4, h5, h6, figure {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
-        min-height: 700px;
+        min-height: 500px;
         position: relative; }
         #colorlib-hero .flexslider .slides li:after {
           position: absolute;
@@ -305,12 +305,12 @@ h1, h2, h3, h4, h5, h6, figure {
     #colorlib-hero .flexslider .slider-text {
       display: table;
       opacity: 0;
-      min-height: 700px;
+      min-height: 350px;
       z-index: 9; }
       #colorlib-hero .flexslider .slider-text > .slider-text-inner {
         display: table-cell;
         vertical-align: middle;
-        min-height: 700px; }
+        min-height: 500px; }
         #colorlib-hero .flexslider .slider-text > .slider-text-inner h1, #colorlib-hero .flexslider .slider-text > .slider-text-inner h2 {
           margin: 0;
           padding: 0;

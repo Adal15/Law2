@@ -236,9 +236,143 @@
   transform: translateX(10px);
 }
 </style>
+
+<style>
+	/* #disclaimer-modal{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:9999;
+}
+
+.disclaimer-box{
+background:white;
+padding:30px;
+width:750px;
+max-width:90%;
+border-radius:5px;
+}
+
+#agree-btn{
+margin-top:20px;
+padding:10px 20px;
+background:#caa84a;
+border:none;
+color:white;
+cursor:pointer;
+} */
+</style>
+
+<style>
+	#disclaimer-modal{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.7);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 9999;
+padding: 15px; /* prevents touching screen edges on mobile */
+box-sizing: border-box;
+}
+
+.disclaimer-box{
+background: white;
+padding: 30px;
+width: 750px;
+max-width: 100%;
+border-radius: 6px;
+box-sizing: border-box;
+}
+/* .disclaimer-box{
+max-height: 90vh;
+overflow-y: auto;
+} */
+#agree-btn{
+margin-top: 20px;
+padding: 10px 20px;
+background: #caa84a;
+border: none;
+color: white;
+cursor: pointer;
+font-size: 16px;
+}
+
+/* Tablet */
+@media (max-width: 768px){
+.disclaimer-box{
+padding: 25px;
+width: 100%;
+max-height: 90vh;
+overflow-y: auto;
+}
+
+#agree-btn{
+width: 100%;
+}
+}
+
+/* Mobile */
+@media (max-width: 480px){
+.disclaimer-box{
+padding: 20px;
+border-radius: 4px;
+max-height: 90vh;
+overflow-y: auto;
+}
+
+#agree-btn{
+width: 100%;
+padding: 12px;
+font-size: 15px;
+}
+}
+</style>
 	</head>
 	<body>
-		
+		<!-- Disclaimer Modal -->
+<div id="disclaimer-modal">
+  <div class="disclaimer-box">
+
+    <h2>DISCLAIMER</h2>
+
+    <p>
+      The rules of the Bar Council of India prohibit law firms from soliciting
+      work or advertising in any manner.By clicking on 'I AGREE', the user acknowledges that:
+    </p>
+
+
+	<!-- <p>The user wishes to gain more information about TAXNEXLLP Legal, its practice areas and its attorneys, for his/her own information and use;
+The information is made available/provided to the user only on his/her specific request and any information obtained or material downloaded from this website is completely at the user's volition and any transmission, receipt or use of this site is not intended to, and will not, create any lawyer-client relationship; and
+None of the information contained on the website is in the nature of a legal opinion or otherwise amounts to any legal advice.
+Phoenix Legal is not liable for any consequence of any action taken by the user relying on material/information provided under this website. In cases where the user has any legal issues, he/she in all cases must seek independent legal advice.</p> -->
+   <ul>
+	<li>The user wishes to gain more information about Phoenix Legal, its practice areas and its attorneys, for his/her own information and use;</li>
+	<li>The information is made available/provided to the user only on his/her specific request and any information obtained or material downloaded from this website is completely at the user's volition and any transmission, receipt or use of this site is not intended to, and will not, create any lawyer-client relationship;</li>
+	<li>None of the information contained on the website is in the nature of a legal opinion or otherwise amounts to any legal advice.</li>
+   </ul>
+   <p>TaxNex LLP is not liable for any consequence of any action taken by the user relying on material/information provided under this website. In cases where the user has any legal issues, he/she in all cases must seek independent legal advice.</p>
+
+<!-- <ul>
+      <li>The user wishes to gain information about the firm.</li>
+      <li>The information is provided only on request.</li>
+      <li>This website does not create a lawyer-client relationship.</li>
+      <li>No information on this website amounts to legal advice.</li>
+    </ul> -->
+
+    <button id="agree-btn">I Agree</button>
+
+  </div>
+</div>
 	<div class="colorlib-loader"></div>
 	
 	<div id="page">
@@ -277,14 +411,14 @@
 		</div>
 	</nav>
 
-	<aside id="colorlib-hero" class="js-fullheight">
-		<div class="flexslider js-fullheight">
+	<aside id="colorlib-hero">
+		<div class="flexslider">
 			<ul class="slides">
 		   	<li style="background-image: url(images/banner/taxnexllp2.png);">
 		   		<div class="overlay-gradient"></div>
 		   		<div class="container">
 		   			<div class="row">
-			   			<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
+			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
 			   				<div class="slider-text-inner">
 			   					<!-- <h1>We help to solve business law solution</h1>
 									<h2>Your Legal Solution starts here!</h2> -->
@@ -298,7 +432,7 @@
 		   		<div class="overlay-gradient"></div>
 		   		<div class="container">
 		   			<div class="row">
-			   			<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
+			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
 			   				<div class="slider-text-inner">
 			   					<h1>Your ultimate law &amp; legal Solution</h1>
 									<h2>Your Legal Solution starts here!</h2>
@@ -312,7 +446,7 @@
 		   		<div class="overlay-gradient"></div>
 		   		<div class="container">
 		   			<div class="row">
-			   			<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
+			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
 			   				<div class="slider-text-inner">
 			   					<h1>Defend Your Constitutional Right with Legal Help</h1>
 									<h2>Your Legal Solution starts here!</h2>
